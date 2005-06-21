@@ -1,0 +1,9 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Dict-Word.t
+lib/Dict/Word.pm
+lib/Dict/Word/Radix.pm
+lib/Dict/Word/Encode.pm
+META.yml                                 Module meta-data (added by MakeMaker)

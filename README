@@ -1,0 +1,58 @@
+Dict-Word version 1.3
+======================
+
+This is a dictionary from Arabic to another language:
+for every word coming from the input file, these modules are able to take out the radix, look for the translation according to the radix and exporting the whole dictionary DB in HTML or LaTeX.
+In order to work on a DB, you will need the Dict::Db module.
+If you'd only want the radix of a word or its ArabTeX translitteration, no other modules are needed.
+
+Main features are:
+->finding the radix, which is accomplished by chopping away all the prefixes and suffixes, and by some characters removal at the end.
+->exportation. This is a real good thing for Arabic students like me, so that I may easily memorize the meaning of a radix. This way, the finding the translation of a word while translating "on-the-fly" will be easier and faster.
+
+All the vocabulary databases are located in a particular folder, so that these files may be directly modified without any harm to the script execution.
+Moreover I'm working on an importation module, so that new radixes/terms may be added easily and quickly to the local database.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+
+DEPENDENCIES
+
+This module requires no other modules, just Perl >=5.8.1
+
+
+MODULES
+
+Dict::Word
+	this will create the Word object
+
+Dict::Word::Radix
+	this will return the radix of a word
+
+Dict::Word::Encode
+	this will return the ArabTeX encoding of a word
+
+NOTES
+
+->Everything (script code and data) works ONLY if raw data is encoded in Unicode (utf8 or UTF-8). Other representations will lead to errors or wrong results.
+->Please use non-formatted text as input data.
+Using Microsoft Word .doc files, Adobe .pdf or HTML pages WILL cause problems.
+
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2005 by Andrea Benazzo
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.6 or,
+at your option, any later version of Perl 5 you may have available.
+
+
